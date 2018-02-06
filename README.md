@@ -1,7 +1,6 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Hey my name is Jennifer. I am based in Berlin and enjoy the course on Careerfoundry!
 
 Things you may want to cover:
 
