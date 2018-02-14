@@ -32,10 +32,10 @@
         </div>
         <div class="collapse navbar-collapse" id="myNavbar">
           <ul class="nav navbar-nav navbar-right">
-            <li class="active"><a href="#index">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#faq">FAQ</a></li>
-            <li><a href="#contact">Contact</a></li>
+            <li><%=link_to 'Home', simple_pages_index_path %></li>
+            <li><%=link_to 'Products', products_path %></li>
+            <li><%=link_to 'About', simple_pages_about_path %></li>
+            <li><%=link_to 'Contact', simple_pages_contact_path %></li>
           </ul>
         </div>
       </div>
@@ -43,12 +43,15 @@
 
   <body>
 
+    <div class="main">
 
     <%= yield %>
 
+    </div>
+
     <footer class="footer">
   <div class="container" id="footer">
-     <div class="footer-element">&copy; Jennifer Wjertzoch 2017
+     <div class="footer-element">&copy; Jennifer Wjertzoch 2018
      </div>
    </div><!-- end container footer -->
  </footer>
