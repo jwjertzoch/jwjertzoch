@@ -10,10 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-<<<<<<< HEAD
 ActiveRecord::Schema.define(version: 20180214100930) do
-=======
-ActiveRecord::Schema.define(version: 20180213200015) do
 
   create_table "orders", force: :cascade do |t|
     t.integer "user_id"
@@ -22,7 +19,7 @@ ActiveRecord::Schema.define(version: 20180213200015) do
     t.index ["product_id"], name: "index_orders_on_product_id"
     t.index ["user_id"], name: "index_orders_on_user_id"
   end
->>>>>>> 8daac84e5e42ce9beeb2a2b6f64be516a238b7d5
+
 
   create_table "products", force: :cascade do |t|
     t.string "name"
@@ -30,11 +27,11 @@ ActiveRecord::Schema.define(version: 20180213200015) do
     t.string "image_url"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-<<<<<<< HEAD
+
     t.string "color"
-=======
+
     t.string "colour"
->>>>>>> 8daac84e5e42ce9beeb2a2b6f64be516a238b7d5
+
     t.string "price"
   end
 
