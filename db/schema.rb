@@ -30,9 +30,6 @@ ActiveRecord::Schema.define(version: 20180214100930) do
 
     t.string "color"
 
-    t.string "colour"
-
-    t.string "price"
   end
 
 end
