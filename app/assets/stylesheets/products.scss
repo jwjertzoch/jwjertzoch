@@ -8,6 +8,13 @@
    padding:15px;
 }
 
+.product_Box a:hover{
+   background: white;
+   color:#bbbbbb;
+   text-decoration: none;
+  -webkit-transition:color 600ms;
+}
+
 #p_description{
    border-bottom: 1px solid #bbbbbb;
    padding-bottom: 30px;

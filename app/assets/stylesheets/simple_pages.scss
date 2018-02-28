@@ -34,11 +34,32 @@
   margin-top:50px;
 }
 
+/**** searchform ****/
+
+
+.btn-primary {
+  float: right;
+  padding: 6px 10px;
+  margin-right: 16px;
+  background: #ddd;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  cursor: pointer;
+  color: #808080;
+}
+
+.btn-primary:hover {
+  background: #ccc;
+  -webkit-transition:color 600ms;
+}
+
+
+
   /**** Carousel ****/
 
 .carousel-inner > .item > img{
   max-height:100vh;
-   margin: 0 auto;
+  margin: 0 auto;
 }
 
 .carousel-indicators{
@@ -50,6 +71,7 @@
 }
 
   /**** Contact ****/
+  /**** previousbutton ****/
 
   a {
     text-decoration: none;
