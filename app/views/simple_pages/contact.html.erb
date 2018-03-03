@@ -1,6 +1,26 @@
 
 <div class="container">
-  <h1>CONTACT</h1>
-  <p>Well, hello! We would love to hear from you and help in any way.</p>
-  <a href="/simple_pages/index" class="previous round">&#8249;</a>
+  
+<h1>Contact Us</h1>
+
+<%= flash[:notice] %>
+
+<%= form_with(url:"/simple_pages/thank_you", method: "post", local: true) do |form| %>
+<div class="row">
+  <div class="form-group">
+    <%= form.label :name %>
+    <%= form.text_field :name, class: "form-control", placeholder: "Enter Name" %>
+  </div>
+  <div class="form-group">
+    <%= form.label :email %>
+    <%= form.text_field :email, class: "form-control", placeholder: "Enter Email" %>
+  </div>
+  <div class="form-group">
+    <%= form.label :message %>
+    <%= form.text_area :message, class: "form-control", placeholder: "Enter Message", rows: 5 %>
+  </div>
+</div>
+<%= form.submit "Send", class: "form_label" %>
+<% end %>
+
 </div>
