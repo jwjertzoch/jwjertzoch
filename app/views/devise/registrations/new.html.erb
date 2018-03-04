@@ -1,0 +1,31 @@
+<div class="row">
+
+  <div class="form form-signin">
+    <h2>Sign up</h2>
+    <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+      <%= devise_error_messages! %>
+
+      <div class="form-group">
+        <%= f.label :email, class: "form-label" %>
+        <%= f.email_field :email, autofocus: true, class: "form-control", placeholder: "Enter Email" %>
+      </div>
+
+      <div class="form-group">
+        <%= f.label :password, class: "form-label" %>
+        <%= f.password_field :password, autocomplete: "off", class: "form-control", placeholder: "Enter Password" %>
+      </div>
+
+      <% if devise_mapping.rememberable? -%>
+        <div class="form-group form-label">
+          <%= f.check_box :remember_me %>
+          <%= f.label :remember_me, id: "remember-me-text" %>
+        </div>
+      <% end -%>
+
+      <%= f.submit "Sign up", class: "btn btn-primary form-label form-control" %>
+
+    <% end %>
+
+  <p class="devise-link-text"><%= render "devise/shared/links" %></p>
+  </div>
+</div>

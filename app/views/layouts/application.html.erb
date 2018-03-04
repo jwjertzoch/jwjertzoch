@@ -37,20 +37,37 @@
             <li><%=link_to 'Orders', orders_path %></li>
             <li><%=link_to 'About', simple_pages_about_path %></li>
             <li><%=link_to 'Contact', simple_pages_contact_path %></li>
-            <li>  <%= form_tag(products_path, method: "get", class: "navbar-form navbar-right") do %>
+            <li> <%= form_tag(products_path, method: "get", class: "navbar-form navbar-right") do %>
               <%= text_field_tag(:q, "", type: "text", class: "form-control", placeholder: "search text") %>
               <%= submit_tag("Login", class: "btn btn-primary") %>
               <%= submit_tag("Search", class: "btn btn-primary") %>
               <% end %>
             </li>
+            <ul class="nav pull-right">
+              <li>
+                <% if user_signed_in? %>
+                <%= link_to('Logout', destroy_user_session_path, method: :delete) %>
+                <% else %>
+                <%= link_to('Login', new_user_session_path) %>
+                <% end %>
+                </li>
+              </ul>
           </ul>
       </div>
     </nav>
 
-  <body>
+    <!-- flash notice tags -->
+      <% if notice %>
+        <p id="notice" class="alert alert-info"><%= notice %></p>
+      <% end %>
 
+      <% if alert %>
+        <p id="alert" class="alert alert-info"><%= alert %></p>
+      <% end %> <!-- end flash notice tags -->
 
-    <%= yield %>
+      <div class="page-wrap">
+        <%= yield %>
+      </div>
 
 
     <footer class="footer">
