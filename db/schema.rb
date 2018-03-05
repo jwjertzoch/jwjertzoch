@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180303225331) do
+ActiveRecord::Schema.define(version: 20180305141451) do
 
   create_table "orders", force: :cascade do |t|
     t.integer "user_id"
@@ -21,7 +21,7 @@ ActiveRecord::Schema.define(version: 20180303225331) do
   end
 
 # Could not dump table "products" because of following StandardError
-#   Unknown type 'strings' for column 'price'
+#   Unknown type '' for column 'price'
 
   create_table "users", force: :cascade do |t|
     t.string "first_name"
