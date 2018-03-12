@@ -43,5 +43,7 @@
       <%= render partial: "product", locals: {product: product} %>
     <% end %>
 
+     <%= will_paginate @products, :page_links =>true %>
+
 </div>
 </div>
