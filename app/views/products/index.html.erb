@@ -8,8 +8,9 @@
     <% end %>
   <% end %>
 
-
-<%= will_paginate @products, :page_links =>true %>
+  <div class="col-md-12 pagination-container">
+    <%= will_paginate @comments, class: "comment-pagination"%>
+  </div>
 
   </div><!-- end row -->
 </div><!-- end container -->
