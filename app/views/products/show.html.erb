@@ -1,47 +1,39 @@
+<!--================ Show product page ================== -->
 
-<article class="container">
+<section class="container">
   <div class="show">
     <p id="notice"><%= notice %></p>
-    <div class="row">
-    <div class="col-sm-9 col-md-9">
-    <p>
-      <%= image_tag(@product.image_url, class: "img-responsive") %>
-    </p>
-    </div>
-    <div class="col-sm-3 col-md-3">
-    <p>
-      <strong>Name:</strong>
-      <%= @product.name %>
-    </p>
+    <div class="row-product-details">
+      <div class="col-sm-9 col-md-9 product-image">
+        <p>
+          <%= image_tag(@product.image_url, class: "img-responsive") rescue nil %>
+        </p>
+      </div><!-- /product-image -->
+      <div class="col-sm-3 col-md-3 product-description-container">
+        <h2 class="product-name">
+          <%= @product.name %>
+        </h2>
 
-    <p>
-     <strong>Description:</strong>
-      <%= @product.description %>
-    </p>
+        <p class="product-description">
+          <%= @product.description %>
+        </p>
 
+        <p class="product-colour">
+          <%= @product.colour %>
+        </p>
 
-    <p>
-      <strong>Colour:</strong>
-      <%= @product.colour %>
-    </p>
-    <p>
-      <strong>Price:</strong>
-      <%= @product.price %>
-    </p>
+        <p class="product-price">
+          <%= number_to_currency(@product.price, unit: "€") %>
+        </p>
 
-    <p>Average Rating: <div class="rated" data-score="<%= @product.average_rating %>"></div> </p>
+        <p>Average Rating: <div class="rated" data-score="<%= @product.average_rating %>"></div></p>
 
-      <%= render 'new_comment' %>
-      <%= render 'comments' %>
+        <%= render 'new_comment' %>
+        <%= render 'comments' %>
 
-      <%= will_paginate @comments%>
+        <%= will_paginate @comments%>
 
-    </div>
-    </div>
-
-
-    <%= link_to 'Edit', edit_product_path(@product) , class: "btn btn-default" %>
-    <%= link_to 'Back', products_path, class: "btn btn-default" %>
-
-  </div>
-</article>
+      </div><!-- /product-description-container -->
+    </div><!-- /row-product-details -->
+  </div><!-- /show -->
+</section>

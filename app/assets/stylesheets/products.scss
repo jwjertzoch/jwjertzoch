@@ -1,21 +1,3 @@
 // Place all the styles related to the products controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-
-
-.product_Box{
-   border: 1px solid #bbbbbb;
-   padding:15px;
-}
-
-.product_Box a:hover{
-   background: white;
-   color:#bbbbbb;
-   text-decoration: none;
-  -webkit-transition:color 600ms;
-}
-
-#p_description{
-   border-bottom: 1px solid #bbbbbb;
-   padding-bottom: 30px;
-}

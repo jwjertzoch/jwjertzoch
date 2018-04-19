@@ -1,9 +1,17 @@
 
-<div class="col-sm-1 col-md-3">
-  <div class="product_Box">
-  <p><%= image_tag(product.image_url, class: "img-responsive") %></p>
-  <a><h1><%= product.name %></h1></a>
-  <p id="p_description"><%= product.description %></p>
-  <p><strong><%= product.price %></strong></p>
-</div><!-- /product_Box -->
-</div><!-- /col -->
+<!--========== Partial product listing =============== -->
+<% cache product do %>
+<div class="col-md-4 col-sm-12 product-container">
+  <% logger.debug "Product: #{product.name}" %>
+    <%= link_to ('<div class="product-container-link"> </div>').html_safe, product_path(product)%>
+
+  <div class="product-img-container">
+    <%= link_to image_tag(product.image_url, class: "img-responsive"), product_path(product) %>
+  </div>
+  <div class="product-title">
+    <h3><%= product.name %></h3>
+    <p><%= number_to_currency(product.price, unit: "€") %></p>
+  </div>
+
+</div>
+<% end %>

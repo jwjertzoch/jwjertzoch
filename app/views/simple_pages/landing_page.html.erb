@@ -1,32 +1,39 @@
-<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
-  <!-- Indicators -->
+<!-- ======================= Carousel ========================-->
 
-  <ol class="carousel-indicators">
-      <% @products.each_with_index do |product, index| %>
-      <li data-target="#carousel-example-generic" class="<%=" active" if product == @products.first%>"
-      data-slide-to="<%=index%>"></li>
+<section id="home" class="container-fluid carousel-container">
+  <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+    <!-- Indicators --->
+    <ol class="carousel-indicators">
+      <% @products.each_with_index do |product, i| %>
+      <li data-target="#carousel-example-generic" data-slide-to="<% i %>" class="<%="active" if i==0%>"></li>
       <% end %>
-  </ol>
-
-  <!-- Wrapper for slides -->
+    </ol>
+    <!-- Wrapper for slides -->
     <div class="carousel-inner" role="listbox">
       <% @products.each do |product| %>
       <div class="item<%= " active" if product == @products.first %>">
-        <%= image_tag(product.image_url) %>
-        <div class="carousel-caption">
-          <%= product.name %>
+        <div class="car-image-container">
+          <%= image_tag(product.image_url, class: "img-responsive") %>
         </div>
+        <div class="carousel-caption">
+          <div class="btn-checkproduct">
+            <div class="btn btn-primary">
+              <%= link_to product.name, product%>
+            </div>
           </div>
+        </div>
+      </div>
+<!-- Caption here to fix button jump, but then name in button doesn't change -->
       <% end %>
     </div>
-
-  <!-- Controls -->
-  <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
-    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-    <span class="sr-only">Previous</span>
-  </a>
-  <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
-    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-    <span class="sr-only">Next</span>
-  </a>
-</div>
+    <!-- Controls -->
+    <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+      <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+      <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
+</section><!-- End carousel -->

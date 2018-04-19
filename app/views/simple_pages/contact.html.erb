@@ -1,30 +1,39 @@
+<!-- ============== Contact ================ -->
 
-<div class="container">
+<div class="container contact-container">
   <div class="row">
     <div class="col-lg-6 col-lg-offset-3 col-md-6 col-md-offset-3 col-sm-6 col-sm-offset-3">
 
-<h1>Contact Us</h1>
+      <h1>Contact Us</h1>
 
-<%= flash[:notice] %>
+      <%= flash[:notice] %>
 
-<%= form_with(url:"/simple_pages/thank_you", method: "post", local: true) do |form| %>
-<div class="row">
-  <div class="form-group">
-    <%= form.label :name %>
-    <%= form.text_field :name, class: "form-control", placeholder: "Enter Name" %>
-  </div>
-  <div class="form-group">
-    <%= form.label :email %>
-    <%= form.text_field :email, class: "form-control", placeholder: "Enter Email" %>
-  </div>
-  <div class="form-group">
-    <%= form.label :message %>
-    <%= form.text_area :message, class: "form-control", placeholder: "Enter Message", rows: 5 %>
-  </div>
-</div>
-<%= form.submit "Send", class: "form_label" %>
-<% end %>
+      <%= form_with(url:"/simple_pages/thank_you", method: "post", local: true) do |form| %>
 
-    </div>
-  </div>
-</div>
+      <div class="form-group">
+
+        <%= form.label :name %>
+        <%= form.text_field :name, class: "form-control", placeholder: "Name" %>
+
+      </div>
+
+      <div class="form-group">
+
+        <%= form.label :email %>
+        <%= form.text_field :email, class: "form-control", placeholder: "Email" %>
+
+      </div>
+
+      <div class="form-group">
+
+        <%= form.label :message %>
+        <%= form.text_area :message, class: "form-control", placeholder: "Message", rows: 5 %>
+
+      </div>
+
+      <%= form.submit "Send", class: "form_label" %>
+      <% end %>
+
+    </div><!-- /col -->
+  </div><!-- /row -->
+</div><!-- /contact-container -->
