@@ -100,6 +100,10 @@ transition: background-color 100ms;
   background: #696163 !important;
 }
 
+.index-page{
+  position: absolute;
+}
+
 //================= Carousel Styles ================//
 
 .carousel-container {
@@ -190,6 +194,13 @@ transition: background-color 100ms;
 
 .contact-container {
   margin: 10rem auto 10rem auto;
+}
+
+//================= Jumbotron ================//
+
+.jumbotron {
+  background-color: white;
+  padding-top: 50px;
 }
 
 //================= Footer Styles ================//
