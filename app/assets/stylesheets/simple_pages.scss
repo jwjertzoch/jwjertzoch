@@ -175,6 +175,41 @@ transition: background-color 100ms;
   margin-bottom: 45px;
 }
 
+//================= Logo Styles ================//
+
+.container .sixteen.columns {
+    width: 1180px;
+    padding: 10px;
+}
+
+div.logo {
+    padding-top: 70px !important;
+}
+.column, .columns {
+    margin-left: 10px;
+    margin-right: 10px;
+}
+.logo {
+    font-family: Kreon;
+    font-weight: lighter;
+    font-size: 20px;
+    text-transform: uppercase;
+    color: #454649;
+    padding-top: 15px;
+}
+
+.logo a {
+    text-align: center;
+    margin: 0 auto;
+    display: block;
+    max-width: 190px;
+}
+
+.sixteen img{
+  display: block;
+margin-left: auto;
+margin-right: auto;
+}
 
 //================= About Styles ================//
 
@@ -182,12 +217,6 @@ transition: background-color 100ms;
   display: block;
   margin: 2rem auto;
   text-align: center;
-}
-
-//================= Index Styles ================//
-
-.img-cover{
-  width: 100%;
 }
 
 //================= Contact Styles ================//
@@ -201,6 +230,10 @@ transition: background-color 100ms;
 .jumbotron {
   background-color: white;
   padding-top: 50px;
+}
+
+.img-cover{
+  width: 100%;
 }
 
 //================= Footer Styles ================//
@@ -218,4 +251,33 @@ footer {
   float:left;
   margin-top:50px;
   position: fixed;
+}
+
+//================= Media Queries ================//
+
+
+@media only screen and (max-width: 1200px) {
+  .sixteen img {
+    width: 50%;
+  }
+
+  .carousel-inner {
+    width: 90%;
+  }
+
+  .carousel-container {
+    margin-top: 2rem;
+  }
+
+  .container {
+    margin: 3rem auto 3rem auto;
+}
+
+.btn-checkproduct {
+    bottom: 3rem;
+}
+
+.carousel-indicators {
+    bottom: -50px;
+}
 }
