@@ -50,12 +50,36 @@
 /*======= products/new & products/edit Styles ============*/
 
 .product-form-container {
+  width: 400px;
+  margin: 4rem auto;
+  padding: 3rem 3rem;
+  border: 1px solid #F0F1F4;
+  border-radius: 2px;
   display: block;
+  float: none;
 }
 
+#product_name{
+  width: 100%;
+}
+
+#product_image_url{
+  width: 100%;
+}
+
+#product_colour{
+  width: 100%;
+}
+
+#product_price{
+  width: 100%;
+  margin-bottom: 20px;
+}
 
 label {
   width: auto;
+  color: #777;
+  margin-top: 5px;
 }
 
 .form-product {
@@ -67,7 +91,7 @@ label {
 }
 
 .form-control {
-  &:focus {
+    &:focus {
     border-color: rgba(107,124,189, 0.4);
     outline: 3px auto rgba(107,124,189, 0.3);
   }
@@ -83,14 +107,21 @@ label {
 }
 
 #product_description {
-  min-height: 5rem;
+  min-height: 12rem;
   height: auto;
+  width: 100%;
 }
+
 
 /*======= products/index Media Queries ============*/
 @media only screen and (max-width: 1300px) {
   .product-container {
     width: 47%;
+    // height: 43rem;
+  }
+  .product-form-container {
+    margin-top: 0;
+    width: 90%;
     // height: 43rem;
   }
 }

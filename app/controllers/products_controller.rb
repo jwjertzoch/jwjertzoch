@@ -27,8 +27,9 @@ end
   end
 
   # GET /products/1/edit
-  def edit
-  end
+def edit
+  authorize! :edit, @product
+end
 
   # POST /products
   # POST /products.json
