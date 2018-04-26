@@ -31,8 +31,15 @@ ActiveRecord::Schema.define(version: 20180316112315) do
     t.index ["user_id"], name: "index_orders_on_user_id"
   end
 
-# Could not dump table "products" because of following StandardError
-#   Unknown type '' for column 'price'
+  create_table "products", force: :cascade do |t|
+    t.string "name"
+    t.text "description"
+    t.string "image_url"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string "colour", default: "0"
+    t.string "price", default: "0"
+  end
 
   create_table "users", force: :cascade do |t|
     t.string "first_name"
@@ -49,7 +56,7 @@ ActiveRecord::Schema.define(version: 20180316112315) do
     t.datetime "last_sign_in_at"
     t.string "current_sign_in_ip"
     t.string "last_sign_in_ip"
-    t.boolean "admin"
+    t.boolean "admin", default: false, null: false
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end

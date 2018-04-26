@@ -1,6 +1,7 @@
 class ProductsController < ApplicationController
   before_action :set_product, only: [:show, :edit, :update, :destroy]
 
+
 # GET /products
   # GET /products.json
   def index
@@ -24,6 +25,7 @@ end
   # GET /products/new
   def new
     @product = Product.new
+    authorize! :new,  @product
   end
 
   # GET /products/1/edit
