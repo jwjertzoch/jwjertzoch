@@ -30,6 +30,11 @@
           <span class="icon-bar"></span>
         </button>
       </div><!-- /navbar-header -->
+      <div class="capeline-logo">
+        <a href="https://capeline.herokuapp.com/" title="Capeline">
+          <img src="/images/logo2.png" alt="logo">
+        </a>
+      </div>
       <div class="navbar-collapse collapse">
         <ul class="nav navbar-nav navbar-right">
           <li><%= link_to "Home", root_path %></li>
@@ -51,23 +56,7 @@
             </ul>
         </ul>
       </div>
-
   </nav>
-
-<div class="sixteen columns logo">
-    <%= link_to root_path do %>
-
-
-          <a href="https://capeline.herokuapp.com/" title="Capeline">
-
-              <img src="https://images1.dawandastatic.com/User/9839/9839510/user_200/1505207152-842.jpg">
-
-          </a>
-            <% end %>
-        </div>
-
-
-
 
     <!-- flash notice tags -->
     <% if notice %>
@@ -77,14 +66,6 @@
     <% if alert %>
     <p id="alert" class="alert alert-info"><%= alert %></p>
     <% end %> <!-- end flash notice tags -->
-
-
-
-
-
-
-
-
 
   <div class="page-wrap">
     <%= yield %>
@@ -97,6 +78,6 @@
   <footer class = "container-fluid copy-right"> &copy; 2018 Jennifer Wjertzoch
     <a><i class = "fa fa-twitter-square" aria-hidden="true"></i></a>
     <a><i class = "fa fa-facebook-square" aria-hidden="true"></i></a>
-  </footer
+  </footer>
   </body>
 </html>
