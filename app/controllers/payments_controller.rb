@@ -5,12 +5,12 @@ def create
   # Create the charge on Stripe's servers - this will charge the user's card
   begin
     charge = Stripe::Charge.create(
-      amount: 2000, # amount in cents, again
-      currency: "usd",
-      source: token,
-      description: params[:stripeEmail]
-      receipt_email: params[:stripeEmail]
-    )
+        amount:  (@product.price * 100).to_i,
+        currency: "usd",
+        source: token,
+        description: params[:stripeEmail],
+        :receipt_email => params[:stripeEmail]
+)
 
     if charge.paid
       Order.create(product_id: @product.id, user_id: @user.id,
@@ -27,6 +27,5 @@ def create
     redirect_to product_path(product)
   end
   # The card has been declined
-end
 end
 end
