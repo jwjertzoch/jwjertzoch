@@ -9,8 +9,9 @@ def create
         currency: "usd",
         source: token,
         description: params[:stripeEmail],
-        :receipt_email => @user.email
+        :receipt_email => params[:stripeEmail]
 )
+
     if charge.paid
       Order.create(product_id: @product.id, user_id: @user.id,
         total: @product.price.to_i)
@@ -26,4 +27,3 @@ def create
     redirect_to product_path(product)
   end
   # The card has been declined
-end
