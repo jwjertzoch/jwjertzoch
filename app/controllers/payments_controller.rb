@@ -27,4 +27,3 @@ def create
   end
   # The card has been declined
 end
-end
