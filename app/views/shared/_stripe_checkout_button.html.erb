@@ -4,6 +4,6 @@
   data-image = "/assets/<%=@product.image_url %>"
   data-name = "<%= @product.name %>"
   data-description = "<%= @product.description %>"
-   data-amount="<%=@product.price*100%>">
+   data-amount="<%=@product.price.to_i * 100%>">
 </script>
 <%= hidden_field_tag(:product_id, @product.id) %>
