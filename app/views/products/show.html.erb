@@ -6,7 +6,10 @@
     <div class="row-product-details">
       <div class="col-sm-9 col-md-9 product-image">
         <p>
-          <%= image_tag(@product.image_url, class: "img-responsive") rescue nil %>
+          <%=
+          if (@product.image_url != nil)
+          image_tag(@product.image_url, class: "img-responsive product img-zoom", data_zoom_images:@product.image_url) 
+          end %>
         </p>
       </div><!-- /product-image -->
       <div class="col-sm-3 col-md-3 product-description-container">
