@@ -1,13 +1,14 @@
-<!--========== Product index =============== -->
 
 <div class="container product-listing-container">
   <div class="row product-row">
-    <% cache(cache_key_for_products) do %>
-    <%= render @products %>
+    <% cache (cache_key_for_products) do %>
+      <%= render @products %>
+      <% end %> 
+
     <% @products.each do |product| %>
       <%= render partial: 'product', locals: {product: product } %>
     <% end %>
-  <% end %>
+
 
   <div class="col-md-12 pagination-container">
     <%= will_paginate @comments, class: "comment-pagination"%>
