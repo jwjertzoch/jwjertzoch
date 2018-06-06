@@ -1,4 +1,3 @@
-<% cache product do %>
 <div class="col-md-4 col-sm-12 product-container">
   <% logger.debug "Product: #{product.name}" %>
     <%= link_to ('<div class="product-container-link"> </div>').html_safe, product_path(product)%>
@@ -10,6 +9,4 @@
     <h3><%= product.name %></h3>
     <p><%= number_to_currency(product.price, unit: "€") %></p>
   </div>
-
 </div>
-<% end %>
