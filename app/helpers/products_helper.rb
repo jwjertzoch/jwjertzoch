@@ -5,10 +5,10 @@ module ProductsHelper
     "products/all-#{count}-#{max_updated_at}"
   end
   def get_products
-    products = $redis.get("products8")
+    products = $redis.get("products")
     if products.nil?
       products=Product.all
-      $redis.set("products8",products)
+      $redis.set("products",products)
   end
     products
   end

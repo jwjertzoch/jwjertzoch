@@ -14,6 +14,8 @@ Rails.application.routes.draw do
 
   post 'payments/create'
 
+mount ActionCable.server => '/cable'
+
   resources :users
 
   resources :products do
