@@ -31,18 +31,23 @@
           <%= number_to_currency(@product.price, unit: "€") %>
         </p>
 
-        <p> Average Rating: <div class="rated" id="average-rating" data-score= "<%=@product.average_rating %>"></div></p>
 
-        <%= form_with(url: '/payments/create') do |form| %>
-        <%= hidden_field_tag(:product_id, @product.id) %>
-        <%= render partial: "shared/stripe_checkout_button" %>
+    <%= form_with(url: '/payments/create') do |form| %>
+      <%= hidden_field_tag(:product_id, @product.id) %>
+      <%= render partial: "shared/stripe_checkout_button" %>
+    <% end %>
 
-        <div class="alert alert-info" style="display:none" role="alert">A new comment was posted!</div>
+    <p>
+      Average Rating:
+      <div class="rated" id="average-rating" data-score="<%= @product.average_rating %>"></div>
+    </p>
 
-        <%= render 'new_comment' %>
-        <%= render 'comments' %>
+    <%= render 'new_comment' %>
+    <div class="alert alert-info" style="display:none" role="alert">A new comment was posted!</div>
+    <%= render 'comments' %>
 
-        <%= will_paginate @comments%>
+    <%= will_paginate @comments %>
+
 
       </div><!-- /product-description-container -->
     </div><!-- /row-product-details -->
