@@ -5,14 +5,11 @@ module ProductsHelper
     "products/all-#{count}-#{max_updated_at}"
   end
   def get_products
-    products = $redis.get("products3")
-    #puts "Am I Here"
+    products = $redis.get("products7")
     if products.nil?
-      puts "first run"
       products=Product.all
-      $redis.set("products3",products)
+      $redis.set("products7",products)
   end
     products
-    #JSON.load products
   end
 end

@@ -6,18 +6,18 @@ class ProductsController < ApplicationController
 # GET /products
   # GET /products.json
   def index
-  #if params[:q]
-    #search_term = params[:q]
-    #@products = Product.search(search_term)
-  #else
-    #@products = Product.all
-  #end
-    #@products = @products.all.paginate(page: params[:page], per_page: 5)
-#end
-
-@products=get_products
-puts @products
+  if params[:q]
+    search_term = params[:q]
+    @products = Product.search(search_term)
+  else
+    @products = Product.all
+  end
+    @products = @products.all.paginate(page: params[:page], per_page: 5)
 end
+
+#@products=get_products
+#puts @products
+#end
 
   # GET /products/1
   # GET /products/1.json
