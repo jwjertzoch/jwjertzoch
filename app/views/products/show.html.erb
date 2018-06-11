@@ -25,22 +25,17 @@
         <p class="product-colour">
           <%= @product.colour %>
         </p>
-                <% end %>
+        <% end %>
 
         <p class="product-price">
           <%= number_to_currency(@product.price, unit: "€") %>
         </p>
-
 
         <p> Average Rating: <div class="rated" id="average-rating" data-score= "<%=@product.average_rating %>"></div></p>
 
         <%= form_with(url: '/payments/create') do |form| %>
         <%= hidden_field_tag(:product_id, @product.id) %>
         <%= render partial: "shared/stripe_checkout_button" %>
-
-
-
-
 
         <%= render 'new_comment' %>
         <%= render 'comments' %>
@@ -51,4 +46,4 @@
     </div><!-- /row-product-details -->
   </div><!-- /show -->
 </section>
-  <% end %>
+<% end %>

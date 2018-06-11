@@ -38,6 +38,10 @@ gem 'jbuilder', '~> 2.5'
 # gem 'capistrano-rails', group: :development
 gem 'stripe'
 gem 'dalli'
+gem 'redis-rails'
+gem 'redis'
+gem 'redis-namespace'
+gem 'redis-rack-cache'
 
 gem 'brakeman'
 
