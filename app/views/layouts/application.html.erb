@@ -31,15 +31,13 @@
         </button>
       </div><!-- /navbar-header -->
       <div class="navbar-collapse collapse">
-        <ul class="nav navbar-nav navbar-right">
-          <li><%= link_to "Home", root_path %></li>
-          <li><%= link_to "Products", products_path %></li>
-          <li><%= link_to "About", simple_pages_about_path %></li>
-          <li><%= link_to "Contact", simple_pages_contact_path %></li>
-          <li><%= form_with(model: @product_search_obj, method: 'get', local:true, class: "navbar-form navbar-right") do |form| %>
-            <%= text_field_tag(:q, "", type: "text", class: "form-control", placeholder: "search text") %>
-            <%= submit_tag("Search", class: "btn btn-default")   %>
-            <% end %></li>
+        <form class="navbar-form navbar-right" action="/products">
+            <div class="form-group">
+            <%= form_tag("/products", method:"get") do %>
+            <%= label_tag(:q, "") %>
+            <%= text_field_tag(:q, nil, class: "form-control search_field", placeholder: "search") %>
+            <%= submit_tag("Search", class: "btn btn-default") %>
+            </div>
             <ul class="nav pull-right">
               <li>
                 <% if user_signed_in? %>
@@ -49,9 +47,16 @@
                 <% end %>
               </li>
             </ul>
-        </ul>
-      </div>
-  </nav>
+          </form>
+          <ul class="nav navbar-nav navbar-right">
+            <li><%= link_to "Home", root_path %></li>
+            <li><%= link_to "Products", products_path %></li>
+            <li><%= link_to "About", simple_pages_about_path %></li>
+            <li><%= link_to "Contact", simple_pages_contact_path %></li>
+            <% end %></li>
+          </ul>
+        </div>
+      </nav>
 
     <!-- flash notice tags -->
     <% if notice %>

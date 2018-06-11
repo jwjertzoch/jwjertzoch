@@ -12,6 +12,7 @@ class Product < ApplicationRecord
   # merge scope that is defined in comment model 'recent_comments scope'
   scope :review_recent_comments, -> {joins(:comments).merge(Comment.recent_comments)}
 
+
   def self.search(search_term)
     Product.where("name LIKE ?", "%#{search_term}%")
   end
