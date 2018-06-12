@@ -104,4 +104,6 @@ Rails.application.configure do
 
   config.web_socket_server_url = "wss://capeline.herokuapp.com/cable"
   config.action_cable.allowed_request_origins = ['https://capeline.herokuapp.com', 'http://capeline.herokuapp.com']
+
+  
 end
