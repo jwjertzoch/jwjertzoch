@@ -1,6 +1,7 @@
 <!--================ Show product page ================== -->
 
 <section class="container">
+  <div class="row" data-product-id ="<%= @product.id%>">
   <div class="show">
     <p id="notice"><%= notice %></p>
     <div class="row-product-details">
@@ -31,15 +32,13 @@
           <%= number_to_currency(@product.price, unit: "€") %>
         </p>
 
-
-
         <%= form_tag "/payments/create" do %>
-      <%= hidden_field_tag(:product_id, @product.id) %>
-      <%= render partial: 'shared/stripe_checkout_button' %>
-<% end %>
+        <%= hidden_field_tag(:product_id, @product.id) %>
+        <%= render partial: 'shared/stripe_checkout_button' %>
+        <% end %>
 
-<p> Average Rating: <div class="rated" id="average-rating" data-score= "<%=@product.average_rating %>"></div></p>
-
+        <p> Average Rating: <div class="rated" id="average-rating" data-score= "<%=@product.average_rating %>"></div></p>
+      </div>
 
         <div class="alert alert-info" style="display:none" role="alert">A new comment was posted!</div>
 
