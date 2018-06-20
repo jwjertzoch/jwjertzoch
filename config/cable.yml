@@ -7,4 +7,3 @@ test:
 production:
   adapter: redis
   url: redis://h:p7481c0a17f06fe2a7c6196a5b8667e842e8d73ea57f2b58bf5309735a7148b2e@ec2-35-168-150-175.compute-1.amazonaws.com:17859
-  channel_prefix: myapp_production
