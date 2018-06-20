@@ -8,7 +8,6 @@ class CommentsController < ApplicationController
     @user = current_user
     respond_to do |format|
       if @comment.save
-        CommentUpdateJob.perform_later(@comment, @comment.user)
         # ActionCable.server.broadcast 'product_channel', comment: @comment, average_rating: @comment.product.average_rating
         #ProductChannel.broadcast_to @product.id, comment: CommentsController.render(partial: 'comments/comment', locals: {comment: @comment, current_user: current_user}), average_rating: @product.average_rating
         format.html { redirect_to @product, notice: 'Review was created successfully.' }
