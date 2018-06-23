@@ -4,6 +4,7 @@ module ApplicationCable
 
     def connect
       self.current_user = find_verified_user
+      logger.info(self.current_user)
     end
 
     def disconnect
