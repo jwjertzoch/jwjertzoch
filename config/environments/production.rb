@@ -102,9 +102,8 @@ Rails.application.configure do
 
   config.action_mailer.default_url_options = { host: 'localhost:3000' }
 
-  config.web_socket_server_url = "wss://capeline.herokuapp.com/cable"
-  config.action_cable.url = 'wss://capeline.herokuapp.com/cable'
-  config.action_cable.allowed_request_origins = ['https://capeline.herokuapp.com', 'http://capeline.herokuapp.com']
+  config.web_socket_server_url = "wss:///capeline.herokuapp.com/cable"
+config.action_cable.allowed_request_origins = ['https://capeline.herokuapp.com', 'http://capeline.herokuapp.com']
 
 
 end
