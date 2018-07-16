@@ -9,21 +9,21 @@
 //================= Navigation Styles ================//
 
 .container-fluid-nav {
-width: 80%;
-max-width: 1160px;
-border-bottom: 0px !important;
-margin: 0 auto;
-background-color: #F0F1F4;
-z-index: 1000;
+  width: 80%;
+  max-width: 1160px;
+  border-bottom: 0px !important;
+  margin: 0 auto;
+  background-color: #F0F1F4;
+  z-index: 1000;
 }
 
 .navbar-default {
-background-color: #F0F1F4;
-border-color: #F0F1F4;
+  background-color: #F0F1F4;
+  border-color: #F0F1F4;
 }
 
 .navbar-inverse .navbar-nav > .active > a  {
-background-color: rgba(38, 86, 123, 0.8) !important;
+  background-color: rgba(38, 86, 123, 0.8) !important;
 
 &:active  {
   background-color: rgba(38, 86, 123, 0.8) !important;
@@ -39,11 +39,11 @@ background-color: rgba(38, 86, 123, 0.8) !important;
 }
 
 .navbar ul li a {
-color: #696163 !important;
-font-weight: 300;
-text-transform: uppercase;
-transition: background-color 100ms;
--webkit-transition: border-bottom 100ms;
+  color: #696163 !important;
+  font-weight: 300;
+  text-transform: uppercase;
+  transition: background-color 100ms;
+  -webkit-transition: border-bottom 100ms;
 
 &:hover {
   background-color: rgba(195, 195, 195, 0.8) !important;
@@ -108,7 +108,7 @@ transition: background-color 100ms;
 }
 
 .car-image-container{
-    margin-top: 50px;
+  margin-top: 50px;
 }
 
 .btn-checkproduct {
@@ -158,31 +158,32 @@ transition: background-color 100ms;
 //================= Logo Styles ================//
 
 .container .sixteen.columns {
-    width: 1180px;
-    padding: 10px;
+  width: 1180px;
+  padding: 10px;
 }
 
 div.logo {
-    padding-top: 70px !important;
+  padding-top: 70px !important;
 }
+
 .column, .columns {
-    margin-left: 10px;
-    margin-right: 10px;
+  margin-left: 10px;
+  margin-right: 10px;
 }
 .logo {
-    font-family: Kreon;
-    font-weight: lighter;
-    font-size: 20px;
-    text-transform: uppercase;
-    color: #454649;
-    padding-top: 15px;
+  font-family: Kreon;
+  font-weight: lighter;
+  font-size: 20px;
+  text-transform: uppercase;
+  color: #454649;
+  padding-top: 15px;
 }
 
 .logo a {
-    text-align: center;
-    margin: 0 auto;
-    display: block;
-    max-width: 190px;
+  text-align: center;
+  margin: 0 auto;
+  display: block;
+  max-width: 190px;
 }
 
 .sixteen img{

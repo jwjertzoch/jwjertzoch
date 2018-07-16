@@ -4,6 +4,7 @@
   <div class="row" data-product-id ="<%= @product.id%>">
   <div class="show">
     <p id="notice"><%= notice %></p>
+    <p id="alert"><%= alert %></p>
     <div class="row-product-details">
       <div class="col-sm-9 col-md-9 product-image">
         <p>
@@ -37,12 +38,14 @@
         <%= render partial: 'shared/stripe_checkout_button' %>
         <% end %>
 
-        <p> Average Rating: <div class="rated" id="average-rating" data-score= "<%=@product.average_rating %>"></div></p></div>
+        <p> Average Rating: <div class="rated" id="average-rating" data-score= "<%=@product.average_rating %>"></div></p>
 
-        <div class="alert alert-info" style="display:none" role="alert">A new comment was posted!</div>
-
-        <%= render 'new_comment' %>
-        <%= render 'comments' %>
+        <div id="comments">
+          <div class="alert alert-info" style="display: none" role="alert">
+          A new comment was posted!</div>
+          <%= render 'new_comment' %>
+          <%= render 'comments' %>
+        </div>
 
         <%= will_paginate @comments%>
 
